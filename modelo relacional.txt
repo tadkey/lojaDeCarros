@@ -1,0 +1,40 @@
+=> login(usuario,senha, codUser) 
+	usuario primary key
+	codUser foreign key referencia tabela usuario
+
+=> venda(dataDaVenda, codigoVenda, codCliente)
+	codigoVenda primary key
+	codCliente foreign key refenrencia a tabela cliente
+
+
+=> Cliente(ID, CPF, DataDeNascimento,NomeCompleto,CNH, NivelEscolar, EstadoCivil, RG, Rua, CEP, Cidade, Numero, Complemento)
+	ID primary Key 	
+
+
+=> Estoque (ID, ValorDeCompra,  Cor,  Placa, ValorDeVenda, RodasDeLigaLeve, Ar, BancoEmCoro, Multimidia, PinturaPerolada, idVenda,idFabricante)
+	ID primary Key 
+	idVenda foreign key referencia a tabela venda
+	idFabricante foreign key referencia a tabela fabricante
+
+
+=> Fabricante (id, nomeDoFabricante, modelo, marca)
+	Id primary key
+
+
+
+=> telefone(idUsuario, idTelefone) 
+	idUsuario, idTelefone primary key
+	idUsuario foreign key referencia Usuario
+
+=> HistoricoDeCompras(ID, QuantidadeDeCarros, QuantidadeDeAnaliseDeCredito, QuantidadeDeCreditoNegado, codCliente) 	
+	ID, codCliente primary key
+	
+
+=> usuario(ID,CPF, Email, Nome, Matricula, cargo ) 
+	ID primary Key 
+
+
+=> Relação_3 (codVenda, codUsuario)
+	codVenda, codUsuario primary key
+	codVenda, foreign key referencia a tabela Venda
+	codUsuario ,foreign key  referencia a tabela Usuario
